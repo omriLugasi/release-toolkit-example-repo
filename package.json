@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:omriLugasi/release-toolkit-example-repo.git",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'TBD'"
+  }
 }
