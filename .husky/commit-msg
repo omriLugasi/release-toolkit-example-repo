@@ -1,3 +1,0 @@
-#!/usr/bin/env sh 
- 
- npx release-toolkit commit-lint $1
