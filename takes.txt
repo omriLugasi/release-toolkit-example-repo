@@ -1,0 +1,16 @@
+
+# TAKE 2
+First things first, I'll make sure my local branch is aligned with the origin branch—looks good, so we're ready to move forward.
+Now, as you can see, we have a repository with a source folder containing two projects: project-a and project-b.
+Each of these represents a different package. Our goal is to set up the release process for both using the Release Toolkit.
+Let's dive into how we can make that happen.
+
+# TAKE 3
+ In your browser, navigate to our repository URL, head over to the docs section, and click on the 'Get Started' tab.
+ From there, let's copy the following command and paste it into the terminal under the root folder.
+
+# TAKE 4
+ Now, as you can see, the command has generated three different files for us: an automated GitHub Actions workflow file, a Release Toolkit configuration file, and a commit message guard file under the husky folder.
+
+ In the GitHub Actions file, you'll notice that this workflow is set to run on every push to the master branch. The steps include running yarn install, executing tests with yarn test, and setting the NPM token in the
+ .npmrc file, which is necessary for publishing a new version to GitHub. If you don't need this publishing step, you can remove it.
