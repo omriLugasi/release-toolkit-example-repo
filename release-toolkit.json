@@ -1,0 +1,64 @@
+{
+    "repository": {
+        "repo": "release-toolkit-example-repo",
+        "owner": "omriLugasi"
+    },
+    "workspaces": [
+        {
+            "branch": "master",
+            "folderPath": "src/project-a",
+            "plugins": [
+                {
+                    "name": "github",
+                    "tagPattern": "project-a-v{{tag}}",
+                    "releasePattern": "Project A Release {{release}}"
+                },
+                {
+                    "name": "npm",
+                    "dryRun": true
+                }
+            ]
+        },
+        {
+            "branch": "master",
+            "folderPath": "src/project-b",
+            "plugins": [
+                {
+                    "name": "github",
+                    "tagPattern": "project-b-v{{tag}}",
+                    "releasePattern": "Project B Release {{release}}"
+                },
+                {
+                    "name": "npm",
+                    "dryRun": true
+                }
+            ]
+        }
+    ],
+    "commitPatterns": [
+        {
+            "pattern": "^refactor\\(\\):",
+            "upgrade": "major",
+            "title": "Refactor!"
+        },
+        {
+            "pattern": "^feat\\(\\):",
+            "upgrade": "minor",
+            "title": "Features"
+        },
+        {
+            "pattern": "^chore\\(\\):",
+            "upgrade": "build",
+            "title": "Chores"
+        },
+        {
+            "pattern": "^docs\\(\\):",
+            "upgrade": "ignore",
+            "title": "Docs"
+        },
+        {
+            "pattern": "^ignore\\(\\):",
+            "upgrade": "ignore"
+        }
+    ]
+}
